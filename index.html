@@ -7,113 +7,160 @@
 <style>
 *{box-sizing:border-box}
 body{
- margin:0;
- background:#080d1c;
- color:white;
- font-family:Arial,sans-serif;
+ margin:0;background:#080e1b;color:white;
+ font-family:Arial,sans-serif
 }
 header{
- background:#101b35;
- padding:25px;
- text-align:center;
- border-bottom:2px solid #00aaff;
+ padding:22px 7%;background:#101b30;
+ display:flex;justify-content:space-between;
+ align-items:center;flex-wrap:wrap;gap:15px
 }
-h1{color:#00bfff;text-shadow:0 0 15px #008cff}
-nav{padding:15px;text-align:center}
-nav a{color:#00c8ff;margin:12px;text-decoration:none}
-.container{padding:25px;max-width:1100px;margin:auto}
-h2{color:#00bfff}
+.logo{font-size:25px;font-weight:bold;color:#00c8ff}
+nav a{color:white;text-decoration:none;margin:12px}
+.hero{
+ padding:65px 7%;background:linear-gradient(110deg,#102b54,#080e1b);
+}
+.hero h1{font-size:42px;color:#00c8ff}
+.hero p{color:#c4d4e8;font-size:17px}
+button{
+ background:#008cff;color:white;border:0;
+ padding:12px 22px;border-radius:7px;
+ cursor:pointer;font-weight:bold
+}
+.container{padding:30px 7%}
+.search{
+ width:100%;padding:15px;background:#15243c;
+ border:1px solid #23466c;color:white;
+ border-radius:8px;margin:15px 0 25px
+}
 .games{
  display:grid;
  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
- gap:20px;
+ gap:20px
 }
 .game{
- background:#14213d;
- border:1px solid #087cbd;
- border-radius:12px;
- padding:20px;
- text-align:center;
+ background:#13213a;border-radius:12px;
+ overflow:hidden;border:1px solid #243b5c;
 }
-.game h3{color:#00c8ff}
-.game button{
- background:#008cff;
- color:white;
- border:0;
- padding:12px 20px;
- border-radius:7px;
- cursor:pointer;
+.cover{
+ height:135px;background:linear-gradient(135deg,#07528c,#111a35);
+ display:flex;align-items:center;justify-content:center;
+ font-size:22px;font-weight:bold;color:#00d5ff
 }
-.game button:hover{background:#005bbb}
-footer{text-align:center;padding:25px;color:#8998b5}
+.info{padding:16px}
+.info p{color:#aebed2}
+.status{color:#00d5ff;font-size:13px}
+footer{
+ text-align:center;padding:30px;
+ background:#101b30;color:#899bb5;margin-top:40px
+}
 </style>
 </head>
 <body>
 
 <header>
-<h1>MKTP GAMING CLOUD</h1>
-<p>Oyun dünyasına buluttan bağlan!</p>
+ <div class="logo">MKTP GAMING CLOUD</div>
+ <nav>
+  <a href="#">Ana Sayfa</a>
+  <a href="#games">Oyunlar</a>
+  <a href="#about">Hakkımızda</a>
+ </nav>
 </header>
 
-<nav>
-<a href="#anasayfa">Ana Sayfa</a>
-<a href="#oyunlar">Oyunlar</a>
-<a href="#hakkinda">Hakkımızda</a>
-</nav>
+<section class="hero">
+ <h1>OYUN DÜNYASINA KATIL!</h1>
+ <p>MKTP Gaming Cloud ile oyun dünyasını keşfet.</p>
+ <a href="#games"><button>OYUNLARI KEŞFET</button></a>
+</section>
 
-<div class="container" id="anasayfa">
-<h2>🎮 Oyun Kütüphanesi</h2>
-<p>MKTP Gaming Cloud'a hoş geldin!</p>
+<section class="container" id="games">
+ <h2>🎮 OYUN KÜTÜPHANESİ</h2>
+ <input class="search" id="search"
+ placeholder="Oyun ara..." oninput="filterGames()">
 
-<div class="games" id="oyunlar">
+ <div class="games" id="gameList">
 
-<div class="game">
-<h3>GTA V</h3>
-<p>Rockstar Games</p>
-<button onclick="alert('Oyun sunucusu henüz bağlanmadı!')">OYNA</button>
-</div>
+  <div class="game">
+   <div class="cover">GTA SAN ANDREAS</div>
+   <div class="info">
+    <h3>GTA San Andreas</h3>
+    <p>Açık Dünya</p>
+    <span class="status">● Yakında</span>
+    <p><button onclick="alert('Oyun bağlantısı henüz eklenmedi!')">OYNA</button></p>
+   </div>
+  </div>
 
-<div class="game">
-<h3>Mafia II</h3>
-<p>2K Games</p>
-<button onclick="alert('Oyun sunucusu henüz bağlanmadı!')">OYNA</button>
-</div>
+  <div class="game">
+   <div class="cover">MAX PAYNE 2</div>
+   <div class="info">
+    <h3>Max Payne 2</h3>
+    <p>Aksiyon</p>
+    <span class="status">● Yakında</span>
+    <p><button onclick="alert('Oyun bağlantısı henüz eklenmedi!')">OYNA</button></p>
+   </div>
+  </div>
 
-<div class="game">
-<h3>HITMAN</h3>
-<p>IO Interactive</p>
-<button onclick="alert('Oyun sunucusu henüz bağlanmadı!')">OYNA</button>
-</div>
+  <div class="game">
+   <div class="cover">LEFT 4 DEAD 2</div>
+   <div class="info">
+    <h3>Left 4 Dead 2</h3>
+    <p>Zombi / Aksiyon</p>
+    <span class="status">● Yakında</span>
+    <p><button onclick="alert('Oyun bağlantısı henüz eklenmedi!')">OYNA</button></p>
+   </div>
+  </div>
 
-<div class="game">
-<h3>Resident Evil 2</h3>
-<p>Capcom</p>
-<button onclick="alert('Oyun sunucusu henüz bağlanmadı!')">OYNA</button>
-</div>
+  <div class="game">
+   <div class="cover">NFS UNDERGROUND 2</div>
+   <div class="info">
+    <h3>Need for Speed Underground 2</h3>
+    <p>Yarış</p>
+    <span class="status">● Yakında</span>
+    <p><button onclick="alert('Oyun bağlantısı henüz eklenmedi!')">OYNA</button></p>
+   </div>
+  </div>
 
-<div class="game">
-<h3>Portal 2</h3>
-<p>Valve</p>
-<button onclick="alert('Oyun sunucusu henüz bağlanmadı!')">OYNA</button>
-</div>
+  <div class="game">
+   <div class="cover">INSIDE</div>
+   <div class="info">
+    <h3>Inside</h3>
+    <p>Macera</p>
+    <span class="status">● Yakında</span>
+    <p><button onclick="alert('Oyun bağlantısı henüz eklenmedi!')">OYNA</button></p>
+   </div>
+  </div>
 
-<div class="game">
-<h3>Max Payne 2</h3>
-<p>Rockstar Games</p>
-<button onclick="alert('Oyun sunucusu henüz bağlanmadı!')">OYNA</button>
-</div>
+  <div class="game">
+   <div class="cover">DEAD SPACE</div>
+   <div class="info">
+    <h3>Dead Space</h3>
+    <p>Korku / Aksiyon</p>
+    <span class="status">● Yakında</span>
+    <p><button onclick="alert('Oyun bağlantısı henüz eklenmedi!')">OYNA</button></p>
+   </div>
+  </div>
 
-</div>
-</div>
+ </div>
+</section>
 
-<div class="container" id="hakkinda">
-<h2>MKTP Gaming Cloud</h2>
-<p>MKTP tarafından geliştirilen oyun platformu.</p>
-</div>
+<section class="container" id="about">
+ <h2>MKTP Gaming Cloud</h2>
+ <p>Yeni nesil oyun deneyimi için hazırlanan MKTP platformu.</p>
+</section>
 
 <footer>
-© 2026 MKTP Gaming Cloud
+ © 2026 MKTP Gaming Cloud | Mehmet Stüdyo
 </footer>
+
+<script>
+function filterGames(){
+ let q=document.getElementById("search").value.toLowerCase();
+ document.querySelectorAll(".game").forEach(game=>{
+  game.style.display=game.innerText.toLowerCase().includes(q)
+  ?"block":"none";
+ });
+}
+</script>
 
 </body>
 </html>
