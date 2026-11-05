@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MKTP Gaming Cloud</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ background:#080d1c;
+ color:white;
+ font-family:Arial,sans-serif;
+}
+header{
+ background:#101b35;
+ padding:25px;
+ text-align:center;
+ border-bottom:2px solid #00aaff;
+}
+h1{color:#00bfff;text-shadow:0 0 15px #008cff}
+nav{padding:15px;text-align:center}
+nav a{color:#00c8ff;margin:12px;text-decoration:none}
+.container{padding:25px;max-width:1100px;margin:auto}
+h2{color:#00bfff}
+.games{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+ gap:20px;
+}
+.game{
+ background:#14213d;
+ border:1px solid #087cbd;
+ border-radius:12px;
+ padding:20px;
+ text-align:center;
+}
+.game h3{color:#00c8ff}
+.game button{
+ background:#008cff;
+ color:white;
+ border:0;
+ padding:12px 20px;
+ border-radius:7px;
+ cursor:pointer;
+}
+.game button:hover{background:#005bbb}
+footer{text-align:center;padding:25px;color:#8998b5}
+</style>
+</head>
+<body>
+
+<header>
+<h1>MKTP GAMING CLOUD</h1>
+<p>Oyun dünyasına buluttan bağlan!</p>
+</header>
+
+<nav>
+<a href="#anasayfa">Ana Sayfa</a>
+<a href="#oyunlar">Oyunlar</a>
+<a href="#hakkinda">Hakkımızda</a>
+</nav>
+
+<div class="container" id="anasayfa">
+<h2>🎮 Oyun Kütüphanesi</h2>
+<p>MKTP Gaming Cloud'a hoş geldin!</p>
+
+<div class="games" id="oyunlar">
+
+<div class="game">
+<h3>GTA V</h3>
+<p>Rockstar Games</p>
+<button onclick="alert('Oyun sunucusu henüz bağlanmadı!')">OYNA</button>
+</div>
+
+<div class="game">
+<h3>Mafia II</h3>
+<p>2K Games</p>
+<button onclick="alert('Oyun sunucusu henüz bağlanmadı!')">OYNA</button>
+</div>
+
+<div class="game">
+<h3>HITMAN</h3>
+<p>IO Interactive</p>
+<button onclick="alert('Oyun sunucusu henüz bağlanmadı!')">OYNA</button>
+</div>
+
+<div class="game">
+<h3>Resident Evil 2</h3>
+<p>Capcom</p>
+<button onclick="alert('Oyun sunucusu henüz bağlanmadı!')">OYNA</button>
+</div>
+
+<div class="game">
+<h3>Portal 2</h3>
+<p>Valve</p>
+<button onclick="alert('Oyun sunucusu henüz bağlanmadı!')">OYNA</button>
+</div>
+
+<div class="game">
+<h3>Max Payne 2</h3>
+<p>Rockstar Games</p>
+<button onclick="alert('Oyun sunucusu henüz bağlanmadı!')">OYNA</button>
+</div>
+
+</div>
+</div>
+
+<div class="container" id="hakkinda">
+<h2>MKTP Gaming Cloud</h2>
+<p>MKTP tarafından geliştirilen oyun platformu.</p>
+</div>
+
+<footer>
+© 2026 MKTP Gaming Cloud
+</footer>
+
+</body>
+</html>
